@@ -7,4 +7,4 @@ Will include the use of the bootstrap library, fully responsive for ease of mobi
 - Add local css
 - Add content to about page
 - Add course work and examples]
-- Copmile success stories from current and past students
+- Compile success stories from current and past students
