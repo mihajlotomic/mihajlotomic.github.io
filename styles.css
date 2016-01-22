@@ -8,6 +8,15 @@ h3{
     text-indent: 25px;
 }
 
+.top_indent {
+    margin-top: 2cm;
+}
+
+.crop-img{
+  max-height:2500px;
+  max-width:100%;
+}
+
 .indent_block {
     text-indent: 25px;
 }
