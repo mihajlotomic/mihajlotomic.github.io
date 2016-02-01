@@ -17,6 +17,13 @@ h3{
   max-width:100%;
 }
 
+.crop-screenshot{
+  max-height:500px;
+  max-width:100%;
+    border-style: solid;
+    border-width: 3px;
+}
+
 .indent_block {
     text-indent: 25px;
 }

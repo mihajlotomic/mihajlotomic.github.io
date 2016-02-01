@@ -4,8 +4,15 @@
   <head>
    <title>Tomic Tutoring</title>
 
+<!-- include our libraries and css files -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>    
+      
+      
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css"/>
+
+    
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,26 +29,15 @@
     <div class="container-fluid">
   
       <!-- start collapsed navbar-->
-      <div class="navbar-header">
-        <button 
-        type="button" 
-        class="navbar-toggle collapsed"
-        data-toggle="collapse" 
-        data-target="#main_navbar" 
-        aria-expanded="false">Links</button>
-      </div><!-- / collapsed navbar-->
+
 
       <!-- start un-collapsed navbar-->
-      <div 
-         class="collapse navbar-collapse" 
-         id="main_navbar">
         <ul class="nav navbar-nav">
           <li role="" class="active"><a href="index.html">Home</a></li>
           <li role="" ><a href="testimonials.html">Testimonials</a></li>
           <li role="" ><a href="about.html">About</a></li>
-        </ul>
-      </div><!-- / un-collapsed navbar-->
-        
+          <li role="" ><a href="contact.html">Contact Info</a></li>
+        </ul>        
     </div> <!-- /container -->
   </nav>
       
@@ -51,13 +47,13 @@
 
     <div class="container">
       <h1 class="text-uppercase strong"><b>T</b>omic <b>T</b>utoring Services</h1>
-    </div>
 
 
-    <div class="col-sm-12 col-md-6" >
+
+    <div class="col-sm-12 col-md-12" >
       <img class="top_indent crop-img"  src="purity.png" />
-    </div>
-    <div class="col-sm-12 col-md-6" >
+
+    <div class="col-sm-12 col-md-6" >  
       <h3>Services</h3>
        <blockquote class="indent_block">
           <b>Math</b> tutoring services ranging from Pre-Algebra to AP Calculus. The typical student age is 12 - 19 years old.  I've found that the most effective tutoring consists of going over more difficult concepts covered in class, a clarification of homework problems, and exam review.
@@ -70,15 +66,50 @@
       <blockquote class="indent_block">
             Recommended session length is 1.5 hours. 
       </blockquote>
+  </div>
+  <div class="col-sm-12 col-md-6" >   
       <h3>Location</h3>
       <blockquote class="indent_block">
            Sessions can be conducted at a place of your choosing  -  your home or mine are both options. 
       </blockquote>
-    <h3>Contact Information</h3>
-      <blockquote class="indent_block">
-           Please contact me through my github page for more information.  
-      </blockquote>
-      </div>
+  </div>
 
-  </body>
+      
+  </div>
+      
+  <!--          
+  <div id="contenthere"  class="container-fluid"  role="main">
+    </div>
+   -->
+    <!-- Template -->  
+  <script id="entry" type="text/x-handlebars-template">
+  <div id="inserthere">
+    <h1>{{title}}</h1>
+    <div class="body">
+      {{body}}
+    </div>
+  </div>
+  </script> 
+    
+
+    
+  <!--
+    The javascript code to instantiate the template
+  -->
+  <script type="text/javascript">
+    // get the source code for our two template
+    // and compile them                                                                                                               
+   var context = {
+          title: "Math tutoring services ranging from Pre-Algebra to AP Calculus. The typical student age is 12 - 19 years old.  I've found that the most effective tutoring consists of going over more difficult concepts covered in class, a clarification of homework problems, and exam review. Also, SAT and ACT preparation is available.",
+          
+          body: "This is my first post!" };
+   var source   = $("#entry").html();
+   var template = Handlebars.compile(source);
+   var html    = template(context);
+   $('#contenthere').html(html);
+ </script>
+      
+   </body>
+         
+      
 </html>
