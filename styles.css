@@ -29,7 +29,12 @@ h3{
 }
 
 .navbar-custom {
-    background-color:#64B5F6;
-    color:#000000;
-    border-radius:0;
+    background-color:#64B5F6;    
+    color:#123462;
+    border-radius:44;
+    
+}
+
+.nav.navbar-nav li a {
+    color: white;
 }
